@@ -86,5 +86,43 @@ public class ProductRepository implements Repository<Product> {
         return searchedProduct;
     }
 
+    public List<Product> readValuesByProductScaleAndLine(String productScale, String productLine) {
+        String selectByScaleAndLine = "SELECT * FROM products WHERE productScale = ? AND productLine = ?";
+        List<Product> products = new ArrayList<>();
+
+
+
+        try (Connection connection = manager.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(selectByScaleAndLine)){
+
+            preparedStatement.setString(1, productScale);
+            preparedStatement.setString(2, productLine);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                products.add(
+                        new Product(
+                                resultSet.getString("productCode"),
+                                resultSet.getString("productName"),
+                                resultSet.getString("productLine"),
+                                resultSet.getString("productScale"),
+                                resultSet.getString("productVendor"),
+                                resultSet.getString("productDescription"),
+                                resultSet.getInt("quantityInStock"),
+                                resultSet.getDouble("buyPrice"),
+                                resultSet.getDouble("MSRP")
+                        )
+                );
+            }
+        } catch (SQLException e) {
+            Logger.error(e.getMessage());
+            throw new ConnectionException("Couldn't read data from table");
+        }
+
+
+        return products;
+
+    }
+
 
 }

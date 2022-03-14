@@ -1,1 +1,1 @@
-13:57:45.005 ERROR: ProductService.getProductByProductCode() com.capgemini.exceptions.ProductCodeInvalidFormat: You entered an invalid format for product code
+15:08:03.934 ERROR: ProductService.checkProductScale() com.capgemini.exceptions.InvalidFormat: You entered an invalid format for product scale
