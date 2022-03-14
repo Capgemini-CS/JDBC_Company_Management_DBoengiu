@@ -1,9 +1,7 @@
-package com.capgemini.employees.repository;
+package com.capgemini.repository;
 
 import com.capgemini.MySQLConnectionManager;
-import com.capgemini.Repository;
-import com.capgemini.employees.entity.Employee;
-import com.capgemini.exceptions.ConnectionException;
+import com.capgemini.entity.Employee;
 import com.capgemini.exceptions.ReadFromTableException;
 import org.tinylog.Logger;
 
@@ -14,12 +12,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRepository implements Repository<com.capgemini.employees.entity.Employee> {
+public class EmployeeRepository implements Repository<Employee> {
 
     MySQLConnectionManager manager = new MySQLConnectionManager();
 
     @Override
-    public List<com.capgemini.employees.entity.Employee> readAllValues() {
+    public List<Employee> readAllValues() {
         String selectAllFromTable = "SELECT * FROM employees";
         List<Employee> employees = new ArrayList<>();
 

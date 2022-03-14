@@ -1,4 +1,4 @@
-package com.capgemini.employees.entity;
+package com.capgemini.entity;
 
 public class Employee {
     private int employeeNumber;

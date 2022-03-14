@@ -1,10 +1,8 @@
-package com.capgemini.products.repository;
+package com.capgemini.repository;
 
 import com.capgemini.MySQLConnectionManager;
-import com.capgemini.Repository;
-import com.capgemini.exceptions.ConnectionException;
 import com.capgemini.exceptions.ReadFromTableException;
-import com.capgemini.products.entity.Product;
+import com.capgemini.entity.Product;
 import org.tinylog.Logger;
 
 import java.sql.Connection;

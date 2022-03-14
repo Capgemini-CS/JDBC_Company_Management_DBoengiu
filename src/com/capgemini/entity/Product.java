@@ -1,4 +1,4 @@
-package com.capgemini.products.entity;
+package com.capgemini.entity;
 
 public class Product {
     private String productCode;

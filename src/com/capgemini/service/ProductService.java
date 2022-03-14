@@ -1,8 +1,8 @@
-package com.capgemini.products.service;
+package com.capgemini.service;
 
 import com.capgemini.exceptions.InvalidFormat;
-import com.capgemini.products.entity.Product;
-import com.capgemini.products.repository.ProductRepository;
+import com.capgemini.entity.Product;
+import com.capgemini.repository.ProductRepository;
 import org.tinylog.Logger;
 
 import java.util.List;
