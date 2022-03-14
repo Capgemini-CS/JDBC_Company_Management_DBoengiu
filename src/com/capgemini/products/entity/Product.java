@@ -105,4 +105,12 @@ public class Product {
     public void setMSRP(double MSRP) {
         this.MSRP = MSRP;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productCode='" + productCode + '\'' +
+                ", productName='" + productName + '\'' +
+                '}';
+    }
 }

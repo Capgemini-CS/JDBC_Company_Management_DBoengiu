@@ -1,1 +1,1 @@
-12:30:02.686 ERROR: ProductRepository.read() No operations allowed after connection closed.
+13:57:45.005 ERROR: ProductService.getProductByProductCode() com.capgemini.exceptions.ProductCodeInvalidFormat: You entered an invalid format for product code
