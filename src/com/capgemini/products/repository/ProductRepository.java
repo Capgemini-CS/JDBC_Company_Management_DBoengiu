@@ -3,6 +3,7 @@ package com.capgemini.products.repository;
 import com.capgemini.MySQLConnectionManager;
 import com.capgemini.Repository;
 import com.capgemini.exceptions.ConnectionException;
+import com.capgemini.exceptions.ReadFromTableException;
 import com.capgemini.products.entity.Product;
 import org.tinylog.Logger;
 
@@ -45,7 +46,7 @@ public class ProductRepository implements Repository<Product> {
             }
         } catch (SQLException e) {
             Logger.error(e.getMessage());
-            throw new ConnectionException("Couldn't read data from table");
+            throw new ReadFromTableException("Couldn't read data from table");
         }
 
 
@@ -80,7 +81,7 @@ public class ProductRepository implements Repository<Product> {
 
         } catch (SQLException e) {
             Logger.error(e.getMessage());
-            throw new ConnectionException("Couldn't read data from table");
+            throw new ReadFromTableException("Couldn't read data from table");
         }
 
         return searchedProduct;
@@ -116,7 +117,7 @@ public class ProductRepository implements Repository<Product> {
             }
         } catch (SQLException e) {
             Logger.error(e.getMessage());
-            throw new ConnectionException("Couldn't read data from table");
+            throw new ReadFromTableException("Couldn't read data from table");
         }
 
 

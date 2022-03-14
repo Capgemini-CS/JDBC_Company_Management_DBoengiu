@@ -15,14 +15,14 @@ public class Product {
     }
 
     public Product(String productCode,
-                   String productName,
-                   String productLine,
-                   String productScale,
-                   String productVendor,
-                   String productDescription,
-                   int quantityInStock,
-                   double buyPrice,
-                   double MSRP) {
+                    String productName,
+                    String productLine,
+                    String productScale,
+                    String productVendor,
+                    String productDescription,
+                    int quantityInStock,
+                    double buyPrice,
+                    double MSRP) {
         this.productCode = productCode;
         this.productName = productName;
         this.productLine = productLine;
