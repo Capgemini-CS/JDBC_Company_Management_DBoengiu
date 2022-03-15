@@ -1,12 +1,11 @@
-package com.capgemini.entity;
+package com.capgemini.service;
 
 import lombok.*;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Employee {
+public class EmployeeDTO {
 
     @Getter @Setter
     private int employeeNumber;
@@ -31,6 +30,4 @@ public class Employee {
 
     @Getter @Setter
     private String jobTitle;
-
-
 }

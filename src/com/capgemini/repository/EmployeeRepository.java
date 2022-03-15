@@ -1,5 +1,6 @@
 package com.capgemini.repository;
 
+import com.capgemini.ConnectionManager;
 import com.capgemini.MySQLConnectionManager;
 import com.capgemini.entity.Employee;
 import com.capgemini.exceptions.ReadFromTableException;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class EmployeeRepository implements Repository<Employee> {
 
-    MySQLConnectionManager manager = new MySQLConnectionManager();
+    ConnectionManager manager = new MySQLConnectionManager();
 
     @Override
     public List<Employee> readAllValues() {
